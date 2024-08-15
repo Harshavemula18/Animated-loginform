@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Background Gradient */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.login-form {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    width: 300px;
+    transform: scale(0);
+    animation: formIn 0.5s forwards; /* Animation */
+}
+
+@keyframes formIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #ffb75f;
+    outline: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff7e5f;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #feb47b;
+    transform: scale(1.05);
+}
+
+.form-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.form-footer a {
+    color: #ffac5f;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.form-footer a:hover {
+    color: #feb47b;
+}
+media (max-width: 600px) {
+    .login-form {
+        width: 90%;
+    }
+}
+input-group input {
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+    border-color: #5feaff;
+    box-shadow: 0 0 5px rgba(95, 247, 255, 0.5);
+}
